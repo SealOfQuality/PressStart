@@ -1,0 +1,368 @@
+.navbarBottom{
+	display:block;
+	border-right:1px inset gold;
+	}	
+
+.brands{
+	display:block;
+	position: relative;
+	top:0;
+	border-bottom: 2px ridge black;
+	background-color: #d2cbe6;
+	text-align:center;
+	font-size:140%;
+	}
+
+.items{
+	position: absolute;
+	left:5%;
+	top:10%;
+	width:90%;
+	height:85%;
+	display: grid;
+	border: 2px solid #f76707;
+	border-radius: 5px;
+	overflow:auto;
+}
+
+.items > div{
+	display:grid;
+	grid-template-columns: repeat(8,[col] 12.5%);
+	grid-template-rows: repeat(10, [row] 10%);
+}
+
+.product {
+	border: 2px solid #ffa94d;
+	border-radius: 5px;
+	color: #d9480f;
+ 	height:75%;
+	width:100%;
+	grid-column: col 2/ span 6;
+	grid-row: row 1/ span 7;
+	background-color:silver;
+}
+
+.productName{
+	background-color:black;
+	font-size: 50%;
+}
+
+.price{
+	background-color:blue;
+	font-size: 50%;
+	grid-column: col 1/ span 4;
+	grid-row: row 10/ span 1;
+}
+
+.dropbtn {
+		background-color: #3e887b;
+		color: white;
+		font-size: 12px;
+		border: none;
+		cursor: pointer;
+		font-family: 'Orbitron', sans-serif;
+}
+
+.cartbtn {
+		background-color: #e9834a;
+		color: white;
+		font-size: 12px;
+		border: none;
+		cursor: pointer;
+		font-family: 'Orbitron', sans-serif;
+}
+
+ul.navbar {
+	list-style-type: none;
+	margin: 0;
+	padding-left:10%;
+	padding-right:0%;
+	overflow: hidden;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+	
+
+@media only screen and (min-width: 50px){
+	
+	.wrapper{
+		padding-top:50px;
+	}
+	
+
+	.content {
+		grid-row:row 1 / span 7;	
+	}
+	
+	.items{
+		grid-template-columns: repeat(2, 40%);
+		grid-auto-rows: 30%;
+		grid-gap:2em;
+	}
+	
+	.product {
+		height:65%;
+		grid-row: row 1/ span 2;
+	}
+
+	.productName{
+		grid-column: col 1/ span 5;
+		grid-row: row 8/ span 2;
+	}
+
+	.price{
+		font-size: 45%;
+		grid-column: col 1/ span 5;
+		grid-row: row 10/ span 2;
+	}
+
+	.dropbtn {
+		font-size: 10px;
+		grid-column: col 6/ span 3;
+		grid-row: row 8/ span 2;
+	}
+
+	.cartbtn {
+		font-size: 10px;
+		grid-column: col 6/ span 3;
+		grid-row: row 10/ span 2;
+	}
+
+	.navbarBottom{	
+		grid-column: col 1 /span 2;
+		grid-row:row 9 / span 6;
+	}
+
+	.brands{
+		grid-column: col 1 /span 2;
+		grid-row:row 8 / span 1;
+	}
+
+	.promoPhrase{
+		width:20%;
+	}
+
+	.navbar{
+		display:block;
+	}
+	
+}
+
+
+@media only screen and (min-width: 650px){
+	.wrapper{
+		padding-top:0;
+		grid-template-rows: repeat(10, [row] 100px);
+	}	
+
+	.navbar li{	
+		margin-right:1%;
+		float:left;
+		font-size:90%;
+	}
+
+	.brands{
+		grid-column: col 1 /span 3;
+		grid-row: row 1 /span 1;
+	}
+	.navbarBottom{
+		grid-column: col 1 /span 3;
+		grid-row:row 2 / span 8;
+	}
+
+	.content {
+		grid-column: col 4 /span 17;
+		grid-row:row 1 / span 9;
+	}
+
+	.productName{
+		font-size: 35%;
+	}
+
+	.featured{
+		grid-row: row 6/ span 2;
+	}	
+
+	.footer {
+		grid-row:row 10 / span 1;
+	}
+	
+}
+
+@media only screen and (min-width: 837px){
+	.navbar{
+		display:block;
+	} 
+
+	.description{
+		font-size:80%;
+	}
+	
+	.wrapper{
+		grid-template-columns: repeat(10,[col] auto);
+	}	
+
+
+	.navbarBottom{
+		grid-row:row 2 / span 8;
+	}
+	
+	
+	.content {
+		grid-column: col 2 /span 8;
+		grid-row:row 1 / span 9;
+	}
+	
+	.items{
+		grid-template-columns: repeat(3, 27%);
+		grid-gap:1.3em;
+		
+	}
+	
+	.productName{
+		font-size: 40%;
+	}
+
+	.brands{
+		grid-column: col 1 /span 1;
+	}
+		
+	.navbarBottom{
+		grid-column: col 1 /span 1;
+	}
+	
+	.featured{
+		grid-column: col 2 /span 4;
+		grid-row:row 5 / span 3;
+	}
+	
+	.footer {
+		grid-column: col 1 / span 10;
+	}
+	
+	ul.navbar {
+		list-style-type: none;
+		margin: 0;
+		padding-left:10%;
+		padding-right:0%;
+		overflow: hidden;
+		font-family: 'Yanone Kaffeesatz', sans-serif;
+	}
+
+	.navbar li{
+		margin-right:1%;
+		float:left;
+		font-size:110%;
+	}
+
+
+}
+
+
+@media only screen and (min-width: 1220px){
+
+	.wrapper{
+		grid-template-columns: repeat(20,[col] auto);
+		grid-template-rows: repeat(8, [row] auto;);
+	}	
+
+	.header{
+		height:20%;
+	}
+	
+	.designator{
+		grid-column: col 1 /span 3;
+		grid-row:row 1 / span 7;
+	}
+
+	.content {
+		grid-column: col 4 /span 16;
+	}
+	
+	.brands{
+		grid-column: col 1 /span 3;
+	}
+	.navbarBottom{
+		grid-column: col 1 /span 3;
+	}
+	
+	
+	.featured{
+		grid-column: col 1/ span 1;
+		grid-row: row 7/ span 1;
+	}	
+
+	.footer {
+		grid-column: col 1 /span 20;
+		grid-row:row 10 / span 1;
+	}
+	
+	ul.navbar {
+		list-style-type: none;
+		margin: 0;
+		padding-left:15%;
+		padding-right:10%;
+		overflow: hidden;
+	}
+
+	.navbar li{
+		margin-right:3%;
+		float:left;
+		font-size:115%;
+	}
+
+}
+
+	.box{ 
+		background-color:#444;
+		color:#fff;
+		font-size: 150%;
+	}
+
+	.clone{
+		padding: 1%;
+		border-radius:50%;
+		background-color:rgba(0,0,0,0);
+	}
+
+	.backButton{
+		display:none;
+		width:12%;
+		height:12%;
+		padding-left:3%;	
+	}
+
+	.productName{
+		font-size: 50%;
+	}
+
+	.price{
+		font-size: 50%;
+	}
+
+	.dropbtn {
+		font-size: 12px;
+	}
+
+	.cartbtn {
+		font-size: 12px;
+	}	
+	
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
