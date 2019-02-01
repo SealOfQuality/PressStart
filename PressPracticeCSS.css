@@ -1,44 +1,167 @@
-.bio{
-	position: absolute;
-	top:28%;
-	left:28%;
-	font-size:100%;
-	display:none;
-	font-family: 'Orbitron', sans-serif;
+body{
+	margin:0;
+
 }
 
-.description{
-	display:none;
-	position:absolute;
-	top:35%;
-	left:30%;
-	font-size:80%;
+ul{
+	padding:0;
 }
+
+a {
+	text-decoration:none;
+}
+
+.logo{
+	display:block;
+	margin: 0 auto;
+	width:10%;
+	height:100%;
+}
+
+.header {
+	border-bottom:2px inset gold;
+	background-image:url("psp-images/background.png");
+}
+
+.wrapper {
+	display: grid;
+	background-image:url("psp-images/background.jpg");
+	color":#444;
+}
+
+.content {
+	position: relative;
+	background-image:url("psp-images/grid.png");
+	border-bottom: 2px ridge white;
+}
+
+.featured, .extras{
+	position:relative;
+	font-family: 'Abril Fatface', cursive;
+	font-size:200%;
+	text-align:center;
+}
+
+.featured{
+
+	background-image: radial-gradient(rgba(255,215,0, 0.9),rgba(255, 0, 255, 0.9));
+	border-right: 3px outset gold ;
+}
+
+.extras{
+
+	border-left: 3px inset gold ;
+	background-image: radial-gradient(rgba(60, 0, 255, 0.9),rgba(255, 0, 0, 0.9));
+
+}
+
+.navbar li a{
+	display: block;
+    text-align: center;
+    padding: 15px 15px;
+	color: #666;
+}
+
+.navbar li a:hover{
+	color:white;
+    background-color: #db6125;
+	transition: all .5s;
+}
+
+.footer {
+	position:relative;
+	bottom:0%;
+	height:20%;
+	border-top:2px outset gold; 
+}
+
+.promoRight, .promoLeft, .promoMan, .promoPhrase{
+	position:absolute;
+	width:50%;
+	height:50%;
+}
+
+.navbarBottom{
+	position: relative;
+	border-bottom: 2px ridge black;
+	background-color: #c6b3fc;
+}
+
+ul.navbarBottom {
+	margin:0;
+	overflow: auto;
+	list-style-type:none;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	}
+
+.navbarBottom li a{
+	font-size:130%;
+	display: block;
+	color:#666;
+	padding: 20px 20px;	
+	color:#666;
+}
+
+.navbarBottom li a:hover{
+	background-color: #db6125;
+	transition: all .5s;
+	color:white;
+}
+
+.navbar{
+	position: relative;
+	top:0;
+	z-index:1000;
+	border-bottom: 2px ridge black;
+	background-color: #c6b3fc;
+}
+	
+
+ul.navbar {
+	list-style-type: none;
+	margin: 0;
+	padding-left:10%;
+	padding-right:0%;
+	overflow: hidden;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+	
+
 
 @media only screen and (min-width: 50px){
-
-	.content {
-		grid-column: col 2 /span 15;
-		grid-row:row 1 / span 6;
+	.header{
+		width:100%;
+		height:12%;
 	}
-
+	
 	.wrapper{
-		padding-top:0;
-		grid-template-rows: repeat(8, [row] 100px);
-	}	
-	.navbarBottom{
-		grid-column: col 1 / span 1;
-		grid-row:row 1 / span 6;
+		grid-template-columns: repeat(2,[col] auto);
+		grid-template-rows: repeat(14, [row] 100px);
 	}
-
-	.navbarBottom li a{
-		margin-bottom:2%;
+	
+	.content {
+		font-family: 'Orbitron', sans-serif;
+		position: relative;
+		grid-column: col 1 / span 2;
+	}
+	
+	.featured{
+		grid-column: col 1/ span 2;
+		grid-row: row 11/ span 2;
+		border-bottom:2px solid white;
 	}	
+		
+	.extras{
+		grid-column: col 1/ span 2;
+		grid-row: row 13/ span 2;
+		border-bottom:2px solid white;
+	}
 	
 	.promoPhrase{
-		width:20%;
+		bottom:30%;
+		left:25%;
 	}
-		
+
 	.promoLeft{
 		width:20%;
 		bottom:20%;
@@ -51,57 +174,6 @@
 		bottom:10%;
 		right:10%;
 	}
-
-	.clone{
-		position:absolute;
-		width:15%;
-		height:15%;
-		top:30%;	
-	}
-	.backButton{
-		position: absolute;
-		right:5%;
-		top:15%;
-	}
-
-	.navbar{
-		display:none;
-	}
-
-	.featured{
-		grid-row: row 7/ span 2;
-	}	
-	
-
-}
-
-@media only screen and (min-width: 650px){
-	.wrapper{
-		padding-top:0;
-		grid-template-rows: repeat(8, [row] 100px);
-	}	
-
-	.content {
-		grid-column: col 4 /span 15;
-		grid-row:row 1 / span 6;
-	}
-	
-	.featured{
-		grid-row: row 7/ span 2;
-	}	
-	
-	.extras{
-		grid-column: col 9/ span 10;
-		grid-row: row 7/ span 2;
-	}
-	
-	.promoRight{
-
-		width:45%;
-		height:65%;
-		bottom:10%;
-		right:10%;
-	}
 	
 	.promoMan{
 		width:20%;
@@ -109,146 +181,67 @@
 		left:10%;
 	}
 	
-	.promoPhrase{
-		width:20%;
-		bottom:30%;
-		left:25%;
-	}
-
-	.navbarBottom{
-		grid-column: col 3 /span 1;
-		grid-row:row 1 / span 6;
-		border-bottom:hidden;
-		border-right:1px inset gold;
+	.footer {
 	}
 	
-	.clone{
-		position:absolute;
-		width:15%;
-		height:15%;
-		top:30%;	
-	}
-
-	.description{
-		top:40%;
-		left:30%;
-		font-size:70%;
-	}
-
-	.backButton{
-		position: absolute;
-		right:5%;
-		top:15%;
-	}
-
-}
-
-@media only screen and (min-width: 837px){
-	.navbar{
-		display:block;
-	}
-	
-	.navbarBottom{
-		display:none;
-	} 
-	
-	.clone{
-		height:30%;
-		top:25%;
-	}
-
-	.description{
-		font-size:80%;
-	}
-	
-	.wrapper{
-		grid-template-columns: repeat(10,[col] auto);
-	}	
-
-	.content {
-		grid-column: col 2 /span 8;
-		grid-row:row 1 / span 4;
-	}
-	
-	.featured{
-		grid-column: col 2 /span 4;
-		grid-row:row 5 / span 3;
-	}
-	
-	.extras{
-		grid-column: col 6 /span 4;
-		grid-row:row 5 / span 3;
-	}
-
-	.promoPhrase{
-		left:25%;
-	}
-
-	.navbar li{
-		margin-right:1%;
-		float:left;
+	.navbar li a{
 		font-size:110%;
+		color: #666;
 	}
-
+	
+	
+	
 }
 
-@media only screen and (min-width: 1220px){
-
-	.header{
-	height:20%;
-	}
-
-	.clone{
-		height:40%;
-	}
-
-	.content {
-		grid-column: col 2 /span 8;
-		grid-row:row 1 / span 4;
+@media only screen and (min-width: 650px){
+	.wrapper{
+		grid-template-columns: repeat(20,[col] auto);	
 	}
 	
 	.featured{
-		grid-column: col 2/ span 4;
-		grid-row: row 5/ span 3;
-	}	
-	
-	.extras{
-		grid-column: col 6/ span 4;
-		grid-row: row 5/ span 3;
+		grid-column: col 3/ span 6;
 	}
 	
-	.promoPhrase{
-		left:25%;
+	.promoLeft{
+		width:20%;
+		bottom:20%;
+		left:40%;
 	}
-
-	ul.navbar {
-		padding-left:15%;
-		padding-right:10%;
-	}
-
-	.navbar li{
-		margin-right:3%;
-		float:left;
-		font-size:115%;
+	
+	.footer {
+		grid-column: col 1 / span 20;
 	}
 }
 
-.box{ 
-	background-color:#444;
-	color:#fff;
-	font-size: 150%;
+	.navbar{
+		position: -webkit-sticky; /* Safari */
+		position: sticky;
+		top:0;
+		z-index:1000;
+		border-bottom: 2px ridge black;
+	    background-color: #c6b3fc;
+	}
+
+#kofi{
+	left:5%;
 }
 
-.clone{
-	padding: 1%;
-	border-radius:50%;
-	background-color:rgba(0,0,0,0);
-
+#jmain{
+	left:20%;
 }
 
-.backButton{
-	display:none;
-	width:12%;
-	height:12%;
-	padding-left:3%;	
+#erica{
+	left:35%;
+}
+
+#jackmove{
+	left:50%;
+}
+
+#alex{
+	left:65%;
+}
+
+#guest{
+	left:80%;
 }
