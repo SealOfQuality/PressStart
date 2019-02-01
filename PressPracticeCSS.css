@@ -38,6 +38,19 @@
 	.promoPhrase{
 		width:20%;
 	}
+		
+	.promoLeft{
+		width:20%;
+		bottom:20%;
+		left:40%;
+	}
+	
+	.promoRight{
+		width:45%;
+		height:65%;
+		bottom:10%;
+		right:10%;
+	}
 
 	.clone{
 		position:absolute;
