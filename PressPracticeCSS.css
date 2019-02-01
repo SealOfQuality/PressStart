@@ -57,26 +57,13 @@
 
 	.featured{
 		grid-row: row 7/ span 2;
+		grid-column: col 1 /span 4;
 	}	
-	
-	.promoRight{
-		width:45%;
-		height:65%;
-		bottom:10%;
-		right:10%;
-	}
-	
-	.promoMan{
-		width:20%;
-		bottom:10%;
-		left:10%;
-	}
-	
-	.promoPhrase{
-		width:20%;
-		bottom:30%;
-		left:25%;
-	}
+
+	.extras{
+		grid-row: row 7/ span 2;
+		grid-column: col 4 /span 12;
+	}	
 	
 
 }
@@ -94,11 +81,11 @@
 	
 	.featured{
 		grid-row: row 7/ span 2;
+		grid-column: col 3 /span 7;
 	}	
 	
 	.extras{
-		grid-column: col 9/ span 10;
-		grid-row: row 7/ span 2;
+		grid-column: col 10 /span 9;
 	}
 	
 	.promoRight{
