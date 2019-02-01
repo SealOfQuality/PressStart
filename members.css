@@ -1,6 +1,6 @@
 body{
 	margin:0;
-
+	background-image: url("psp-images/background.jpg");
 }
 
 ul{
@@ -20,7 +20,7 @@ a {
 
 .header {
 	border-bottom:2px inset gold;
-	background-image:url("psp-images/background.png");
+	background-image:url("psp-images/background.PNG");
 }
 
 .wrapper {
@@ -43,35 +43,29 @@ a {
 }
 
 .featured{
-
 	background-image: radial-gradient(rgba(255,215,0, 0.9),rgba(255, 0, 255, 0.9));
 	border-right: 3px outset gold ;
 }
 
 .extras{
-
 	border-left: 3px inset gold ;
 	background-image: radial-gradient(rgba(60, 0, 255, 0.9),rgba(255, 0, 0, 0.9));
-
 }
 
 .navbar li a{
 	display: block;
-    text-align: center;
-    padding: 15px 15px;
+  	text-align: center;
+ 	padding: 15px 15px;
 	color: #666;
 }
 
 .navbar li a:hover{
 	color:white;
-    background-color: #db6125;
+    	background-color: #db6125;
 	transition: all .5s;
 }
 
 .footer {
-	position:relative;
-	bottom:0%;
-	height:20%;
 	border-top:2px outset gold; 
 }
 
@@ -92,7 +86,7 @@ ul.navbarBottom {
 	overflow: auto;
 	list-style-type:none;
 	font-family: 'Yanone Kaffeesatz', sans-serif;
-	}
+}
 
 .navbarBottom li a{
 	font-size:130%;
@@ -115,7 +109,6 @@ ul.navbarBottom {
 	border-bottom: 2px ridge black;
 	background-color: #c6b3fc;
 }
-	
 
 ul.navbar {
 	list-style-type: none;
@@ -125,8 +118,6 @@ ul.navbar {
 	overflow: hidden;
 	font-family: 'Yanone Kaffeesatz', sans-serif;
 }
-	
-
 
 @media only screen and (min-width: 50px){
 	.header{
@@ -136,7 +127,7 @@ ul.navbar {
 	
 	.wrapper{
 		grid-template-columns: repeat(2,[col] auto);
-		grid-template-rows: repeat(14, [row] 100px);
+		grid-template-rows: repeat(15, [row] 100px);
 	}
 	
 	.content {
@@ -182,15 +173,14 @@ ul.navbar {
 	}
 	
 	.footer {
+		grid-column: col 1 / span 2;
+		grid-row:row 15 / span 1;
 	}
 	
 	.navbar li a{
 		font-size:110%;
 		color: #666;
 	}
-	
-	
-	
 }
 
 @media only screen and (min-width: 650px){
