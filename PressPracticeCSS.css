@@ -59,6 +59,26 @@
 		grid-row: row 7/ span 2;
 	}	
 	
+	.promoRight{
+
+		width:45%;
+		height:65%;
+		bottom:10%;
+		right:10%;
+	}
+	
+	.promoMan{
+		width:20%;
+		bottom:10%;
+		left:10%;
+	}
+	
+	.promoPhrase{
+		width:20%;
+		bottom:30%;
+		left:25%;
+	}
+	
 
 }
 
