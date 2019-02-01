@@ -83,7 +83,7 @@ a {
 
 ul.navbarBottom {
 	margin:0;
-	overflow: auto;
+
 	list-style-type:none;
 	font-family: 'Yanone Kaffeesatz', sans-serif;
 }
